@@ -1,0 +1,37 @@
+{
+  "private": true,
+  "name": "dom.ts",
+  "version": "0.0.0",
+  "description": "My personal utilites for software development.",
+  "type": "module",
+  "main": "dist/src/",
+  "scripts": {
+    "test": "dev/specs/_ run",
+    "build": "dev/build"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "jsdom": "*"
+  },
+  "author": "da99",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/da99/dom.ts.git"
+  },
+  "files": [
+    "dist/src/**/*.mjs",
+    "dist/src/**/*.d.ts",
+    "LICENSE",
+    "README.md"
+  ],
+  "bugs": {
+    "url": "https://github.com/da99/dom.ts/issues"
+  },
+  "homepage": "https://github.com/da99/dom.ts#readme",
+  "jshintConfig": {
+    "esversion": 6
+  }
+}
