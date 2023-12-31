@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+#
+#
+set -u -e -o pipefail
+
+
+case "$*" in
+  "-h"|"--help"|"help")
+    echo "$0 -h|--help|help -- Show this message."
+    echo
+    ;;
+  specs)
+    if ! test -e tmp/unit.js ; then
+      (
+        cd tmp;
+        wget "https://raw.githubusercontent.com/unitjs/unit.js/master/browser/dist/unit.js";
+      )
+    fi
+    echo "--- $PWD ---"
+    set -x
+    bun run --hot spec/index.ts
+    ;;
+  *)
+    echo "!!! Unknown command: $*" >&2
+    exit 1
+    ;;
+esac
