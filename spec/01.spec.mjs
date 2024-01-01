@@ -1,6 +1,8 @@
 
 // import assert from 'assert';
 
-it('should add to numbers', () => {
-  unitjs.value(3 + 5).is(9);
+describe('a', function () {
+  it('returns an A element', () => {
+    unitjs.value(3 + 5).is(8);
+  });
 });
